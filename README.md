@@ -10,7 +10,7 @@
 - 日期格式自動檢查與提示
 - 命令列介面操作簡單直覺
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the repository
 
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 python countdown.py 2025-12-31
 ```
 
-### 📌 Example Output
+### Example Output
 
 ```
 $ python countdown.py 2025-12-31
