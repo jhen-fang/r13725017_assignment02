@@ -1,6 +1,7 @@
 import sys
 from datetime import datetime
 from colorama import Fore, Style, init
+from dateutil import parser
 
 init(autoreset=True)
 
@@ -8,7 +9,7 @@ init(autoreset=True)
 def countdown(target_date_str):
     try:
         # 將字串轉成日期
-        target_date = datetime.strptime(target_date_str, "%Y-%m-%d")
+        target_date = parser.parse(target_date_str)
         today = datetime.now()
         delta = target_date.date() - today.date()
         days_remaining = delta.days
@@ -21,7 +22,7 @@ def countdown(target_date_str):
         else:
             print(f"{Fore.RED}{target_date_str} 已經過了 {-days_remaining} 天 🕒")
     except ValueError:
-        print(f"{Fore.RED}⚠️ 日期格式錯誤，請用 YYYY-MM-DD，例如 2025-12-31")
+        print(f"{Fore.RED}⚠️ 日期格式錯誤，請用 YYYY-MM-DD，例如 2025-12-31 或 12/31/2025")
 
 
 def usage():
