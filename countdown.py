@@ -6,6 +6,7 @@ from dateutil import parser
 init(autoreset=True)
 
 
+# Test CI
 def countdown(target_date_str):
     try:
         # 將字串轉成日期
